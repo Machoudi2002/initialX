@@ -49,7 +49,7 @@ import connectDB from './db';
 import { appRouter } from './Routes/AppRouter';
 
 const app = express();
-connectDB();
+// connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
