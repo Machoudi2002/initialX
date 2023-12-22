@@ -11,6 +11,7 @@ const editPackageJson = (folderName) => {
                 const packageJson = JSON.parse(data);
 
                 packageJson.main = 'server.js';
+                packageJson.type = "module";
                 packageJson.scripts = packageJson.scripts || {};
                 packageJson.scripts.start = 'nodemon --exec babel-node src/server.js';
 

@@ -15,6 +15,7 @@ const operations = () => {
     excuCommand("npm init")
     excuCommand("npm install --save-dev @babel/cli @babel/core @babel/preset-env dotenv nodemon");
     excuCommand("npm install express mongoose mongodb");
+    editPackageJson('./');
     createFile(`./.babelrc`, babelFileContent);
     createFile(`./.env`, dotenvFileContent);
     createFile(`./server.js`, serverFileContent);
@@ -25,7 +26,6 @@ const operations = () => {
     createFile(`./Models/AppModel.js`, appModelContent);
     createFolder(`./Controllers`);
     createFile(`./Controllers/AppController.js`, appControllerContent);
-    editPackageJson('./');
     excuCommand("npm start");
 
 

@@ -1,6 +1,6 @@
 {
   "name": "initialx",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Instantly initialize Express.js and MongoDB backends with ease. This command-line tool simplifies project setup, letting you focus on coding, not configuration. Get started swiftly and efficiently.",
   "main": "server.js",
   "bin": {
