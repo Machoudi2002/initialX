@@ -4,7 +4,7 @@ export const getData = (res, req) => {
 }
 `
 const appRouterContent = `
-import { getData } from "../Controllers/AppController"
+import { getData } from "./Controllers/AppController"
 
 export const appRouter = (app) => {
     app.route("/hello")
