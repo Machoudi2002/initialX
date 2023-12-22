@@ -25,8 +25,10 @@ const operations = () => {
     createFile(`./Models/AppModel.js`, appModelContent);
     createFolder(`./Controllers`);
     createFile(`./Controllers/AppController.js`, appControllerContent);
-    editPackageJson('./');
-    excuCommand("npm start");
+    editPackageJson('./', () => {
+        excuCommand("npm start");
+    });
+    
 
 
 }
