@@ -24,5 +24,5 @@ const createFile = (newFile, fileContent) => {
 
 module.exports = {
     createFile,
-    createFolder,
+    createFolder
 };

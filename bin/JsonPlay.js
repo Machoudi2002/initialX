@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const editPackageJson = (folderName) => {
-        fs.readFileSync('package.json', 'utf8', (err, data) => {
+        fs.readFile('package.json', 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading package.json:', err);
                 return;
@@ -11,13 +11,12 @@ const editPackageJson = (folderName) => {
                 const packageJson = JSON.parse(data);
 
                 packageJson.main = 'server.js';
-                packageJson.type = "module";
                 packageJson.scripts = packageJson.scripts || {};
                 packageJson.scripts.start = 'nodemon --exec babel-node src/server.js';
 
                 const updatedPackageJson = JSON.stringify(packageJson, null, 2);
 
-                fs.writeFileSync('package.json', updatedPackageJson, 'utf-8', (writeErr) => {
+                fs.writeFile('package.json', updatedPackageJson, 'utf-8', (writeErr) => {
                     if (writeErr) {
                         console.error('Error writing to package.json:', writeErr);
                         return;
