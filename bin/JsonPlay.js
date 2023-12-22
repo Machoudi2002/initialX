@@ -8,7 +8,7 @@ const editPackageJson = async (folderName) => {
 
         packageJson.main = 'server.js';
         packageJson.scripts = packageJson.scripts || {};
-        packageJson.scripts.start = 'nodemon --exec babel-node src/server.js';
+        packageJson.scripts.start = 'nodemon --exec babel-node server.js';
 
         const updatedPackageJson = JSON.stringify(packageJson, null, 2);
 

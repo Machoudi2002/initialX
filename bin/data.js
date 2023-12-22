@@ -61,21 +61,6 @@ app.listen(4000, () => {
 });
 `
 
-/*const packageJsonFileContent = `
-{
-    "name": "myProject",
-    "description": "",
-    "version": "1.0.0",
-    "main": "server.js",
-    "scripts": {
-        "start": "nodemon --exec babel-node server.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
-}
-`
-*/
 const dotenvFileContent = `
 MONGODB_URI=
 `
