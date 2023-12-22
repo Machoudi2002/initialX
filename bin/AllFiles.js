@@ -1,7 +1,6 @@
 const { createFile, createFolder, changeFolderAndRun } = require("./CreateFiles")
 const { excuCommand } = require("./Command")
 const { editPackageJson } = require("./JsonPlay")
-
 const { 
     appControllerContent,
     appRouterContent, 
@@ -10,7 +9,6 @@ const {
     dotenvFileContent,
     serverFileContent,
     dbFileContent
-
 } = require("./data")
 
 const DirIsEmpty = () => {

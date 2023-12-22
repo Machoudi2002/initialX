@@ -2,9 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const editPackageJson = (folderName) => {
-    const parentDirectory = path.resolve(__dirname, '..');
-    const folderPath = path.join(parentDirectory, folderName);
 
+    folderPath = path.join(__dirname, folderName)
     fs.access(folderPath, (err) => {
         if (err) {
             console.error(`Error accessing folder: ${folderPath}`);

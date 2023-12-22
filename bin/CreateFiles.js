@@ -23,8 +23,7 @@ const createFile = (newFile, fileContent) => {
 }
 
 const changeFolderAndRun = (folderName, command) => {
-    const parentDirectory = path.resolve(__dirname, '..');
-    const folderPath = path.join(parentDirectory, folderName);
+    const folderPath = path.join(__dirname, folderName);
 
     fs.access(folderPath, (err) => {
         if (err) {
