@@ -1,8 +1,7 @@
 const fs = require('fs');
-const path = require('path');
 
 const editPackageJson = (folderName) => {
-        fs.readFile('package.json', 'utf8', (err, data) => {
+        fs.readFileSync('package.json', 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading package.json:', err);
                 return;
@@ -17,7 +16,7 @@ const editPackageJson = (folderName) => {
 
                 const updatedPackageJson = JSON.stringify(packageJson, null, 2);
 
-                fs.writeFile('package.json', updatedPackageJson, 'utf-8', (writeErr) => {
+                fs.writeFileSync('package.json', updatedPackageJson, 'utf-8', (writeErr) => {
                     if (writeErr) {
                         console.error('Error writing to package.json:', writeErr);
                         return;
