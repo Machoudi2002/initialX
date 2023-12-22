@@ -2,17 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const editPackageJson = (folderName) => {
-
-    folderPath = path.join(__dirname, folderName)
-    fs.access(folderPath, (err) => {
-        if (err) {
-            console.error(`Error accessing folder: ${folderPath}`);
-            console.error(err);
-            return;
-        }
-
-        process.chdir(folderPath);
-
         fs.readFile('package.json', 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading package.json:', err);
@@ -40,7 +29,6 @@ const editPackageJson = (folderName) => {
                 console.error('Error parsing package.json as JSON:', jsonError);
             }
         });
-    });
 }
 
 module.exports = {
