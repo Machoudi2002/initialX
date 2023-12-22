@@ -46,7 +46,7 @@ export default connectDB;
 const serverFileContent = `
 import express from 'express';
 import connectDB from './db';
-import { appRouter } from './Routes/Routes';
+import { appRouter } from './Routes/AppRouter';
 
 const app = express();
 connectDB();
@@ -57,7 +57,7 @@ app.use(express.json());
 appRouter(app);
 
 app.listen(4000, () => {
-    console.log("the site running on PORT: 4000");
+    console.log("the site running on http://localhost:4000");
 });
 `
 
