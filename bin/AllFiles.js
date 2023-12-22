@@ -12,37 +12,24 @@ const {
 } = require("./data")
 
 const operations = () => {
-    excuCommand("npm init", () => {
-        excuCommand("npm install --save-dev @babel/cli @babel/core @babel/preset-env dotenv nodemon", () => {
-            excuCommand("npm install express mongoose mongodb", () => {
-                editPackageJson('./', () => {
-                    createFile(`./.babelrc`, babelFileContent, () => {
-                        createFile(`./.env`, dotenvFileContent, () => {
-                            createFile(`./server.js`, serverFileContent, () => {
-                                createFile(`./db.js`, dbFileContent, () => {
-                                    createFolder(`./Routes`, () => {
-                                        createFile(`./Routes/AppRouter.js`, appRouterContent, () => {
-                                            createFolder(`./Models`, () => {
-                                                createFile(`./Models/AppModel.js`, appModelContent, () => {
-                                                    createFolder(`./Controllers`, () => {
-                                                        createFile(`./Controllers/AppController.js`, appControllerContent, () => {
-                                                            excuCommand("npm start");
-                                                        });
-                                                    });
-                                                });
-                                            });
-                                        });
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });
-};
+    excuCommand("npm init")
+    excuCommand("npm install --save-dev @babel/cli @babel/core @babel/preset-env dotenv nodemon");
+    excuCommand("npm install express mongoose mongodb");
+    createFile(`./.babelrc`, babelFileContent);
+    createFile(`./.env`, dotenvFileContent);
+    createFile(`./server.js`, serverFileContent);
+    createFile(`./db.js`, dbFileContent);
+    createFolder(`./Routes`);
+    createFile(`./Routes/AppRouter.js`, appRouterContent);
+    createFolder(`./Models`);
+    createFile(`./Models/AppModel.js`, appModelContent);
+    createFolder(`./Controllers`);
+    createFile(`./Controllers/AppController.js`, appControllerContent);
+    editPackageJson('./');
+    excuCommand("npm start");
 
+
+}
 
 
 module.exports = {
