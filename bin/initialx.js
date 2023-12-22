@@ -11,3 +11,5 @@ const runProject = () => {
         operations();
     })
 }
+
+runProject();
