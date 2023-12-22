@@ -1,6 +1,6 @@
 const appControllerContent = `
 export const getData = (res, req) => {
-    res.json("hello world");
+    res.send("hello world");
 }
 `
 const appRouterContent = `
