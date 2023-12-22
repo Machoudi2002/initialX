@@ -7,7 +7,7 @@ const appRouterContent = `
 import { getData } from "../Controllers/AppController"
 
 export const appRouter = (app) => {
-    app.route("/")
+    app.route("/hello")
     .get(getData)
 }
 `
@@ -53,6 +53,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.json("Server is running successfully");
+});
 
 appRouter(app);
 
