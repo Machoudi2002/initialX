@@ -1,11 +1,12 @@
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+const { execSync } = require('child_process');
 
-const excuCommand = async (command) => {
-    const { stdout, stderr } = await exec(command);
-    console.log(stdout);
-    console.error(stderr);
-};
+const excuCommand = (command) => {
+  try {
+    execSync(command, { stdio: 'inherit' });
+  } catch (error) {
+      console.error('Error :', error.message);
+  }
+}
 
 module.exports = {
   excuCommand
