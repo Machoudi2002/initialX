@@ -26,6 +26,7 @@ const operations = () => {
     createFolder(`./Controllers`);
     createFile(`./Controllers/AppController.js`, appControllerContent);
     editPackageJson('./');
+    excuCommand("npm start");
 
 
 }
