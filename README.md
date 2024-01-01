@@ -13,5 +13,4 @@ Instantly initialize Express.js and MongoDB backends with ease. This command-lin
 
 ```
 npx initialx
-
 ```
